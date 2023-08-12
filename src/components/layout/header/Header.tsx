@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import { ThemeToggle } from '../../theme/theme-toggle';
+import { RESUME_URL } from '@/constants';
 
 export function Header() {
   return (
@@ -11,7 +12,15 @@ export function Header() {
           </a>
         </div>
         <div className="flex items-center space-x-4">
-          <Button>Get my resume</Button>
+          <a
+            className={buttonVariants()}
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer
+          "
+          >
+            Get my resume
+          </a>
           <ThemeToggle />
         </div>
       </div>

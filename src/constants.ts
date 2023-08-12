@@ -53,3 +53,8 @@ export const EXPERIENCE = [
     companyUrl: 'https://www.truedigital.com/',
   },
 ];
+
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/peeranatd/';
+export const GITHUB_URL = 'https://github.com/peeranat-dan';
+export const RESUME_URL =
+  'https://drive.google.com/file/d/19rnOZWjy4Y5icT7jbdAGaADzhl-L8nGq/view';

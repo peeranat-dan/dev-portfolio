@@ -2,6 +2,7 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { GITHUB_URL, LINKEDIN_URL } from '@/constants';
 ---
 
 <section id="hero" class="px-4 lg:px-0 pt-8">
@@ -13,10 +14,20 @@ import { Separator } from '@/components/ui/separator';
     </p>
   </div>
   <div class="flex gap-2 w-full flex-col sm:flex-row">
-    <a href="#" class={buttonVariants()}>
+    <a
+      href={LINKEDIN_URL}
+      class={buttonVariants()}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <LinkedInLogoIcon className="mr-2" /> Linkedin
     </a>
-    <a href="#" class={buttonVariants({ variant: 'outline' })}>
+    <a
+      href={GITHUB_URL}
+      class={buttonVariants({ variant: 'outline' })}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <GitHubLogoIcon className="mr-2" /> Github
     </a>
   </div>
