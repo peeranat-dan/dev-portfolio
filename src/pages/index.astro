@@ -1,0 +1,16 @@
+---
+import { Separator } from '@/components/ui/separator';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/sections/Hero.astro';
+import Experience from '@/sections/Experience.astro';
+import Projects from '@/sections/Projects.astro';
+import '@/styles/global.css';
+---
+
+<BaseLayout>
+  <main class="max-w-3xl mx-auto">
+    <Hero />
+    <Experience />
+    <Projects />
+  </main>
+</BaseLayout>

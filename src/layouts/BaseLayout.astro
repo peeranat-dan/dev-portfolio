@@ -1,0 +1,25 @@
+---
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
+import ThemeProvider from '@/components/theme/ThemeProvider.astro';
+import { cn } from '@/lib/utils';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Nprd's Portfolio</title>
+    <ThemeProvider />
+  </head>
+  <body class={cn('min-h-screen font-sans antialiased')}>
+    <div class="relative flex min-h-screen flex-col">
+      <Header />
+      <div class="flex-1">
+        <slot />
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

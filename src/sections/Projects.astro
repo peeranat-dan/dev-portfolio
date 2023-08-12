@@ -1,0 +1,43 @@
+---
+import { Badge } from '@/components/ui/badge';
+import { PROJECTS } from '@/constants';
+---
+
+<section id="projects" class="px-4 lg:px-0 py-8">
+  <h1 class="text-2xl font-medium">Projects</h1>
+  <p class="text-muted-foreground text-sm">
+    A list of projects I've worked on.
+  </p>
+  {
+    PROJECTS.map(({ name, description, stacks, url }) => (
+      <div class:list={['grid grid-cols-4 gap-0 mt:gap-4 mt-2']}>
+        <div class="col-span-4 sm:col-span-1 p-2">
+          <div class="bg-foreground/20 text-foreground select-none dark:bg-foreground/80 dark:text-background h-16 rounded-lg grid place-items-center w-full sm:h-full">
+            {name}
+          </div>
+        </div>
+        <div class="col-span-4 sm:col-span-3 p-2">
+          <div class="flex gap-1 items-center">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class:list={[
+                'duration-200',
+                url ? 'hover:text-primary' : 'cursor-not-allowed',
+              ]}
+            >
+              <h4 class="text-xl font-semibold">{name}</h4>
+            </a>
+          </div>
+          <p class="text-muted-foreground text-sm mt-1">{description}</p>
+          <div class="flex w-full flex-wrap mt-2 gap-2">
+            {stacks.map((stack) => (
+              <Badge variant="secondary">{stack}</Badge>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</section>
