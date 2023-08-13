@@ -9,12 +9,21 @@ import { PROJECTS } from '@/constants';
     A list of projects I've worked on.
   </p>
   {
-    PROJECTS.map(({ name, description, stacks, url }) => (
-      <div class:list={['grid grid-cols-4 gap-0 mt:gap-4 mt-2']}>
+    PROJECTS.map(({ name, description, stacks, url, imageUrl }) => (
+      <div class:list={['group relative grid grid-cols-4 gap-0 mt:gap-4 mt-2']}>
         <div class="col-span-4 sm:col-span-1 p-2">
-          <div class="bg-foreground/20 text-foreground select-none dark:bg-foreground/80 dark:text-background h-16 rounded-lg grid place-items-center w-full sm:h-full">
-            {name}
-          </div>
+          {imageUrl ? (
+            <img
+              src={imageUrl}
+              alt={`screenshot of ${name}`}
+              class="rounded-lg"
+              loading="lazy"
+            />
+          ) : (
+            <div class="bg-foreground/20 text-foreground select-none dark:bg-foreground/80 dark:text-background h-16 rounded-lg grid place-items-center w-full sm:h-full">
+              {name}
+            </div>
+          )}
         </div>
         <div class="col-span-4 sm:col-span-3 p-2">
           <div class="flex gap-1 items-center">
@@ -23,7 +32,7 @@ import { PROJECTS } from '@/constants';
               target="_blank"
               rel="noopener noreferrer"
               class:list={[
-                'duration-200',
+                'duration-200 group/link',
                 url ? 'hover:text-primary' : 'cursor-not-allowed',
               ]}
             >
