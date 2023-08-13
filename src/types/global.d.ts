@@ -4,6 +4,7 @@ type Project = {
   stacks: string[];
   at?: string;
   url?: string;
+  imageUrl?: string;
 };
 
 type Experience = {
