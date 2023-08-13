@@ -11,6 +11,7 @@ export const PROJECTS = [
       'A portfolio website using Astro, React, and Tailwind CSS to showcase and document my work',
     stacks: ['Astro', 'React', 'Tailwind'],
     at: 'True Digital Group',
+    url: 'https://portfolio.ninprd.com',
   },
   {
     name: 'Pomoration',
