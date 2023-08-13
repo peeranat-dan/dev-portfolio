@@ -1,4 +1,4 @@
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
   {
     name: 'Telecare',
     description:
@@ -36,7 +36,7 @@ export const PROJECTS = [
   },
 ];
 
-export const EXPERIENCE = [
+export const EXPERIENCE: Experience[] = [
   {
     company: 'Skooldio Tech',
     position: 'Software Engineer',
