@@ -16,8 +16,8 @@ export function Header() {
             className={buttonVariants()}
             href={RESUME_URL}
             target="_blank"
-            rel="noopener noreferrer
-          "
+            rel="noopener noreferrer"
+            aria-label="My resume url"
           >
             Get my resume
           </a>
