@@ -2,13 +2,13 @@ export const PROJECTS: Project[] = [
   {
     name: 'Telecare',
     description:
-      'A mini telemedicine platform for small to medium hospitals to appoint their patients and doctors.',
+      'A mini telemedicine platform for small to medium hospitals to schedule appointments for their patients and doctors, enabling communication between them.',
     stacks: ['Nuxt', 'Node', 'Firebase'],
   },
   {
     name: 'Portfolio',
     description:
-      'A portfolio website using Astro, React, and Tailwind CSS to showcase and document my work',
+      'A portfolio website using Astro, React, and Tailwind CSS to showcase and document my work and experience.',
     stacks: ['Astro', 'React', 'Tailwind'],
     at: 'True Digital Group',
     url: 'https://portfolio.ninprd.com',
@@ -16,14 +16,14 @@ export const PROJECTS: Project[] = [
   {
     name: 'Pomoration',
     description:
-      'A productivity web application that helps users focus on their work',
+      'A productivity web application that helps users focus on their work with the Pomodoro technique.',
     stacks: ['React', 'Tailwind', 'Supabase'],
     url: 'https://pomoration.ninprd.com',
   },
   {
     name: 'Photographer Profile',
     description:
-      'A photographer profile website using Astro, React, and Tailwind CSS to showcase and add contact point for my photography work.',
+      'A photographer profile website using Astro, React, and Tailwind CSS to showcase and display my pricing and availability.',
     stacks: ['Astro', 'React', 'Tailwind'],
     url: 'https://nprdphoto.ninprd.com',
   },
@@ -50,7 +50,7 @@ export const EXPERIENCE: Experience[] = [
     position: 'Fullstack Developer (Intern)',
     period: 'Jun 2021 - Dec 2021',
     description:
-      'Designed and developed a mini-telemedicine platform that solves the problem of small to medium hospitals to appoint their patients and doctors.',
+      'Designed and developed a mini telemedicine platform that addresses the challenge faced by small to medium hospitals in scheduling appointments for their patients during the COVID-19 pandemic.',
     companyUrl: 'https://www.truedigital.com/',
   },
 ];
