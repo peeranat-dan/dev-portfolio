@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Photographer Profile',
     description:
-      'A photographer profile website using Astro, React, and Tailwind CSS to showcase and display my pricing and availability.',
+      'A photographer profile website using Astro, React, and Tailwind CSS with @shadcn/ui to showcase and display my pricing and availability.',
     stacks: ['Astro', 'React', 'Tailwind'],
     url: 'https://nprdphoto.ninprd.com',
     imageUrl: '/projects/nprdphoto-screenshot.webp',
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Blog',
     description:
-      'A blog website using Astro, React, and Tailwind CSS to write about my thoughts, experiences ,and technology.',
+      'A blog website using Astro, React, and Tailwind CSS with @shadcn/ui to write about my thoughts, experiences ,and technology.',
     stacks: ['Astro', 'React', 'Tailwind'],
     url: 'https://blog.ninprd.com',
     imageUrl: '/projects/blog-screenshot.webp',
@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'Portfolio',
     description:
-      'A portfolio website using Astro, React, and Tailwind CSS to showcase and document my work and experience.',
+      "A portfolio website using Astro, React, and Tailwind CSS with New York's @shadcn/ui to showcase and document my work and experience.",
     stacks: ['Astro', 'React', 'Tailwind'],
     at: 'True Digital Group',
     url: 'https://portfolio.ninprd.com',
