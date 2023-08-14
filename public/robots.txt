@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /404
+Disallow: /api/
+
+Sitemap: https://portfolio.ninprd.com/sitemap-index.xml
