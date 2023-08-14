@@ -1,4 +1,6 @@
 ---
+import { Image } from '@astrojs/image/components';
+
 import { Badge } from '@/components/ui/badge';
 import { PROJECTS } from '@/constants';
 ---
@@ -13,11 +15,13 @@ import { PROJECTS } from '@/constants';
       <div class:list={['group relative grid grid-cols-4 gap-0 mt:gap-4 mt-2']}>
         <div class="col-span-4 sm:col-span-1 p-2">
           {imageUrl ? (
-            <img
+            <Image
               src={imageUrl}
               alt={`screenshot of ${name}`}
-              class="rounded-lg"
+              class="rounded-lg h-full w-full"
               loading="lazy"
+              width={600}
+              height={450}
             />
           ) : (
             <div class="bg-foreground/20 text-foreground select-none dark:bg-foreground/80 dark:text-background h-16 rounded-lg grid place-items-center w-full sm:h-full">
