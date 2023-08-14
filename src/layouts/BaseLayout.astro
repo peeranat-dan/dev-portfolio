@@ -1,8 +1,13 @@
 ---
+import { SEO } from 'astro-seo';
+
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import ThemeProvider from '@/components/theme/ThemeProvider.astro';
 import { cn } from '@/lib/utils';
+
+const title = 'Peeranat Danaidusadeekul';
+const description = `Dive into Peeranat Danaidusadeekul's coding journey! Explore impressive projects, and skills in software engineering.`;
 ---
 
 <html lang="en">
@@ -10,8 +15,19 @@ import { cn } from '@/lib/utils';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Nprd's Portfolio</title>
+    <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: 'website',
+          image: '/og-image.png',
+        },
+      }}
+    />
     <ThemeProvider />
   </head>
   <body class={cn('min-h-screen font-sans antialiased')}>
