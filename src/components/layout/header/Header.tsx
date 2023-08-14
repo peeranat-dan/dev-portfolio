@@ -17,7 +17,7 @@ export function Header() {
             href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="My resume url"
+            aria-label="Get my resume url"
           >
             Get my resume
           </a>

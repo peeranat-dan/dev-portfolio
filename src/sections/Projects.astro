@@ -36,12 +36,12 @@ import { PROJECTS } from '@/constants';
               target="_blank"
               rel="noopener noreferrer"
               class:list={[
-                'duration-200 group/link',
+                'duration-200 group/link text-xl font-semibold',
                 url ? 'hover:text-primary' : 'cursor-not-allowed',
               ]}
               aria-label={`Visit ${name} website`}
             >
-              <h4 class="text-xl font-semibold">{name}</h4>
+              {name}
             </a>
           </div>
           <p class="text-muted-foreground text-sm mt-1">{description}</p>
