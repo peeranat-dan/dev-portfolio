@@ -45,11 +45,16 @@ import { PROJECTS } from '@/constants';
             </a>
           </div>
           <p class="text-muted-foreground text-sm mt-1">{description}</p>
-          <div class="flex w-full flex-wrap mt-2 gap-2">
+          <ul
+            class="flex w-full flex-wrap mt-2 gap-2"
+            aria-label="Tech stacks used"
+          >
             {stacks.map((stack) => (
-              <Badge variant="secondary">{stack}</Badge>
+              <li>
+                <Badge variant="secondary">{stack}</Badge>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     ))
