@@ -1,5 +1,5 @@
+import { ModeToggle } from '@/components/theme/mode-toggle';
 import { buttonVariants } from '@/components/ui/button';
-import { ThemeToggle } from '../../theme/theme-toggle';
 import { RESUME_URL } from '@/constants';
 
 export function Header() {
@@ -21,7 +21,7 @@ export function Header() {
           >
             Get my resume
           </a>
-          <ThemeToggle />
+          <ModeToggle />
         </div>
       </div>
     </header>
