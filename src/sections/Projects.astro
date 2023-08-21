@@ -10,53 +10,55 @@ import { PROJECTS } from '@/constants';
   <p class="text-muted-foreground text-sm">
     A list of projects I've worked on.
   </p>
-  {
-    PROJECTS.map(({ name, description, stacks, url, imageUrl }) => (
-      <div class:list={['group relative grid grid-cols-4 gap-0 mt:gap-4 mt-2']}>
-        <div class="col-span-4 sm:col-span-1 p-2">
-          {imageUrl ? (
-            <Image
-              src={imageUrl}
-              alt={`screenshot of ${name}`}
-              class="rounded-lg h-full w-full"
-              loading="lazy"
-              width={600}
-              height={450}
-            />
-          ) : (
-            <div class="bg-foreground/20 text-foreground select-none dark:bg-foreground/80 dark:text-background h-16 rounded-lg grid place-items-center w-full sm:h-full">
-              {name}
-            </div>
-          )}
-        </div>
-        <div class="col-span-4 sm:col-span-3 p-2">
-          <div class="flex gap-1 items-center">
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class:list={[
-                'duration-200 group/link text-xl font-semibold',
-                url ? 'hover:text-primary' : 'cursor-not-allowed',
-              ]}
-              aria-label={`Visit ${name} website`}
-            >
-              {name}
-            </a>
+  <ul>
+    {
+      PROJECTS.map(({ name, description, stacks, url, imageUrl }) => (
+        <li class:list="group relative grid grid-cols-4 gap-0 mt:gap-4 mt-2">
+          <div class="col-span-4 sm:col-span-1 p-2">
+            {imageUrl ? (
+              <Image
+                src={imageUrl}
+                alt={`screenshot of ${name}`}
+                class="rounded-lg h-full w-full"
+                loading="lazy"
+                width={600}
+                height={450}
+              />
+            ) : (
+              <div class="bg-foreground/20 text-foreground select-none dark:bg-foreground/80 dark:text-background h-16 rounded-lg grid place-items-center w-full sm:h-full">
+                {name}
+              </div>
+            )}
           </div>
-          <p class="text-muted-foreground text-sm mt-1">{description}</p>
-          <ul
-            class="flex w-full flex-wrap mt-2 gap-2"
-            aria-label="Tech stacks used"
-          >
-            {stacks.map((stack) => (
-              <li>
-                <Badge variant="secondary">{stack}</Badge>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    ))
-  }
+          <div class="col-span-4 sm:col-span-3 p-2">
+            <div class="flex gap-1 items-center">
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class:list={[
+                  'duration-200 group/link text-xl font-semibold',
+                  url ? 'hover:text-primary' : 'cursor-not-allowed',
+                ]}
+                aria-label={`Visit ${name} website`}
+              >
+                {name}
+              </a>
+            </div>
+            <p class="text-muted-foreground text-sm mt-1">{description}</p>
+            <ul
+              class="flex w-full flex-wrap mt-2 gap-2"
+              aria-label="Tech stacks used"
+            >
+              {stacks.map((stack) => (
+                <li>
+                  <Badge variant="secondary">{stack}</Badge>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
 </section>
