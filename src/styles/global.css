@@ -52,6 +52,10 @@
 }
 
 @layer base {
+  ::selection {
+    color: hsl(var(--primary-foreground));
+    background: hsl(var(--primary));
+  }
   * {
     @apply border-border scroll-smooth;
   }
