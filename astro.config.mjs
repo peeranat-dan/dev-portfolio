@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-import image from '@astrojs/image';
+import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,8 +15,11 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.includes('404'),
     }),
-    image({
-      serviceEntryPoint: '@astrojs/image/sharp',
-    }),
   ],
+  adapter: vercel({
+    imageService: true,
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });

@@ -1,29 +1,33 @@
+import * as React from "react"
+
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from "@/components/ui/dropdown-menu"
 
-function setTheme(theme: 'dark' | 'light' | 'system') {
-  const currentTheme = localStorage.getItem('theme') ?? 'light';
-  document.documentElement.classList.remove(currentTheme);
-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light';
-  if (theme === 'system') {
-    document.documentElement.classList.add(systemTheme);
-    localStorage.setItem('theme', systemTheme);
-  } else {
-    document.documentElement.classList.add(theme);
-    localStorage.setItem('theme', theme);
-  }
-}
+function ModeToggle() {
+  const [theme, setThemeState] = React.useState<
+    "theme-light" | "dark" | "system"
+  >("theme-light")
 
-export function ModeToggle() {
+  React.useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains("dark")
+    setThemeState(isDarkMode ? "dark" : "theme-light")
+  }, [])
+
+  React.useEffect(() => {
+    const isDark =
+      theme === "dark" ||
+      (theme === "system" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    document.documentElement.classList[isDark ? "add" : "remove"]("dark")
+  }, [theme])
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -34,16 +38,18 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
+        <DropdownMenuItem onClick={() => setThemeState("theme-light")}>
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
+        <DropdownMenuItem onClick={() => setThemeState("dark")}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
+        <DropdownMenuItem onClick={() => setThemeState("system")}>
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }
+
+export { ModeToggle };
