@@ -6,6 +6,21 @@ export const PROJECTS: Project[] = [
   //   stacks: ['Nuxt', 'Node', 'Firebase'],
   // },
   {
+    name: 'Blog',
+    description:
+      'A blog website using Astro, React, and Tailwind CSS with @shadcn/ui to express about my thoughts, experiences ,and technology. WordPress is used as a headless CMS.',
+    stacks: ['Astro', 'React', 'Tailwind', 'WordPress (Headless)'],
+    url: 'https://blog.ninprd.com',
+    imageUrl: '/projects/blog-screenshot.webp',
+  },
+  {
+    name: "Demo Coffee Shop",
+    description: "A demo coffee shop website using WordPress and Bricks page builder.",
+    stacks: ['WordPress', 'Bricks'],
+    url: 'https://demo-coffee-shop.ninprd.com/',
+    imageUrl: '/projects/demo-coffee-wordpress.webp',
+  },
+  {
     name: 'Pomoration',
     description:
       'A productivity web application that helps users focus on their work with the Pomodoro technique.',
@@ -20,14 +35,6 @@ export const PROJECTS: Project[] = [
     stacks: ['Astro', 'React', 'Tailwind'],
     url: 'https://nprdphoto.ninprd.com',
     imageUrl: '/projects/nprdphoto-screenshot.webp',
-  },
-  {
-    name: 'Blog',
-    description:
-      'A blog website using Astro, React, and Tailwind CSS with @shadcn/ui to express about my thoughts, experiences ,and technology. WordPress is used as a headless CMS.',
-    stacks: ['Astro', 'React', 'Tailwind', 'WordPress (Headless)'],
-    url: 'https://blog.ninprd.com',
-    imageUrl: '/projects/blog-screenshot.webp',
   },
   {
     name: 'Portfolio',
